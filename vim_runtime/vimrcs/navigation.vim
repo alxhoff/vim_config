@@ -77,3 +77,8 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 map l :TlistToggle<CR>
+
+"folding
+set foldmethod=syntax
+set foldnestmax=10
+set foldlevel=2

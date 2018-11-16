@@ -5,8 +5,9 @@ filetype plugin on
 filetype indent on
 
 "colors
+colorscheme mrkn256 
 syntax on
-colorscheme nachtleben
+highlight Pmenu guibg=brown gui=bold
 
 hi none ctermfg=252 ctermbg=none
 
@@ -97,24 +98,24 @@ endif
 set foldcolumn=1
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable 
-
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " => Colors and Fonts
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " Enable syntax highlighting
+" syntax enable
+"
+" " Enable 256 colors palette in Gnome Terminal
+" if $COLORTERM == 'gnome-terminal'
+"     set t_Co=256
+" endif
+"
+" " Set extra options when running in GUI mode
+" if has("gui_running")
+"     set guioptions-=T
+"     set guioptions-=e
+"     set t_Co=256
+"     set guitablabel=%M\ %t
+" endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -129,6 +130,11 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+
+"SUPERTAB
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

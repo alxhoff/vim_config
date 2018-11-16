@@ -8,12 +8,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'chazy/cscope_maps'
 Plug 'ervandew/supertab'
-Plug 'vivien/vim-linux-coding-style'
+"VV big tabs
+"Plug 'vivien/vim-linux-coding-style'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bogado/file-line'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
-" Plug 'itchyny/lightline.vim'
 
 call plug#end()

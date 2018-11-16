@@ -1,6 +1,5 @@
 set runtimepath+=~/.vim_runtime
 
-"colors
 
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/plug.vim

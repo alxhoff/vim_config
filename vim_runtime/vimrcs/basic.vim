@@ -6,7 +6,9 @@ filetype indent on
 
 "colors
 syntax on
-colorscheme mrkn256
+colorscheme nachtleben
+
+hi none ctermfg=252 ctermbg=none
 
 " Set to auto read when a file is changed from the outside
 set autoread

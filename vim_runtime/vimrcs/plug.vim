@@ -10,6 +10,7 @@ Plug 'chazy/cscope_maps'
 Plug 'ervandew/supertab'
 "VV big tabs
 "Plug 'vivien/vim-linux-coding-style'
+Plug 'Townk/vim-autoclose'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bogado/file-line'

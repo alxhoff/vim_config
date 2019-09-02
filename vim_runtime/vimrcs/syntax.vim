@@ -1,21 +1,21 @@
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- " => Syntastic (syntax checker)
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- let g:ale_linters = { 
- \   'javascript': ['jshint'],
- \   'python': ['flake8'],
- \   'go': ['go', 'golint', 'errcheck']
- \}
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic (syntax checker)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+            \   'javascript': ['jshint'],
+            \   'python': ['flake8'],
+            \   'go': ['go', 'golint', 'errcheck']
+            \}
 
-  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- " => Git gutter (Git diff)
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- let g:gitgutter_enabled=0
- nnoremap <silent> <leader>d :GitGutterToggle<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Git gutter (Git diff)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_enabled=0
+nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 
- "NERD COMMENTER
- " Add spaces after comment delimiters by default
+"NERD COMMENTER
+" Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
 " Use compact syntax for prettified multi-line comments
@@ -43,3 +43,11 @@ let g:NERDToggleCheckAllLines = 1
 set colorcolumn=81
 "execute "set colorcolumn=" . join(range(81,335), ',')
 highlight ColorColumn ctermbg=Black ctermfg=DarkRed
+
+"spelling
+set spell spelllang=en
+
+" Formats files when saving
+au BufWrite * :Autoformat
+
+let g:formatter_yapf_style = 'pep8'

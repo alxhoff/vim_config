@@ -68,5 +68,3 @@ else
     colorscheme zenburn
 endif
 
-" Toggle solarized colours
-call togglebg#map("<F5>")

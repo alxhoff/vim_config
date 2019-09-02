@@ -41,3 +41,7 @@ let OmniCpp_MayCompleteArrow = 1
 let OmniCpp_MayCompleteScope = 0
 " Don't select first item in pop-up menu
 let OmniCpp_SelectFirstItem = 0
+set t_Co=256
+set tags=./tags;/
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+set cscoperelative

@@ -57,3 +57,16 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+let python_highlight_all=1
+syntax on
+
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+else
+    colorscheme zenburn
+endif
+
+" Toggle solarized colours
+call togglebg#map("<F5>")

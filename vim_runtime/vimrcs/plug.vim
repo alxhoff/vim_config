@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
+Plug 'ternjs/tern_for_vim', {'do' : 'npm install' }
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'

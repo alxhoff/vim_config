@@ -51,5 +51,11 @@ map <leader>yg :YcmCompleter GoTo<cr>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_log_level = 'debug'
+let g:ycm_server_log_level = 'debug'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_use_clangd = 0
+" let g:ycm_clangd_args = [ '--background-index=false' ]
 
 let g:AutoClosePreserveDotReg = 0

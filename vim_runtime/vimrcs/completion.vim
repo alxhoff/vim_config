@@ -14,12 +14,12 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 " Use Ctrl+Space for omni-completion
 " https://stackoverflow.com/questions/510503/ctrlspace-for-omni-and-keyword-completion-in-vim
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-            \ "\<lt>C-n>" :
-            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
+" inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+"             \ "\<lt>C-n>" :
+"             \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+"             \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+"             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+" imap <C-@> <C-Space>
 
 " Popup menu hightLight Group
 highlight Pmenu ctermbg=13 guibg=LightGray

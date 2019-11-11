@@ -48,6 +48,7 @@ set cscoperelative
 
 " youcompleteme
 map <leader>yg :YcmCompleter GoTo<cr>
+map <leader>yd :YcmCompleter GetDoc<cr>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>

@@ -74,10 +74,5 @@ autocmd FileType c,cpp setlocal equalprg=clang-format
 autocmd FileType h,hpp setlocal equalprg=clang-format
 let python_highlight_all=1
 
-if has('gui_running')
-    set background=dark
-    colorscheme solarized
-else
-    colorscheme zenburn
-endif
+colorscheme zenburn
 

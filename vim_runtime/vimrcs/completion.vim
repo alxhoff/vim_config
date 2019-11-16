@@ -49,10 +49,20 @@ set cscoperelative
 " youcompleteme
 map <leader>yg :YcmCompleter GoTo<cr>
 map <leader>yd :YcmCompleter GetDoc<cr>
+map <leader>yt :YcmCompleter GetType<cr>
+map <leader>yf :YcmCompleter FixIt<cr>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_max_num_candidates = 100
+let g:ycm_max_num_identifier_candidates = 100
+let g:ycm_auto_trigger = 1
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tag_files = 1 
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_log_level = 'debug'
 let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0

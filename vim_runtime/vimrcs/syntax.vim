@@ -48,11 +48,11 @@ highlight ColorColumn ctermbg=Black ctermfg=DarkRed
 set spell spelllang=en
 
 " Formats files when saving
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
+noremap <F3> :Autoformat<CR>
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
-
 let g:formatter_yapf_style = 'pep8'
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -77,5 +77,17 @@ autocmd FileType c,cpp setlocal equalprg=clang-format
 autocmd FileType h,hpp setlocal equalprg=clang-format
 let python_highlight_all=1
 
-colorscheme zenburn
+" colorscheme zenburn
+set t_Co=256
+set cursorline
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
+" lightline
+" let g:lightline.colorscheme='onehalfdark'
+
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+    endif
 

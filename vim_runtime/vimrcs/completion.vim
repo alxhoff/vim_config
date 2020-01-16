@@ -66,6 +66,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_log_level = 'debug'
 let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_use_clangd = 0
 " let g:ycm_clangd_args = [ '--background-index=false' ]
 

@@ -48,3 +48,18 @@ make clean && make clean_clang
 ```
 
 ## VIM Binds
+
+### Leader
+
+leader button is `,`
+
+### Saving
+
+#### Fast save
+
+`,w`
+
+#### Sude save
+
+`:W`
+

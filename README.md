@@ -57,20 +57,99 @@ leader button is `,`
 #### Search
 Space
 
-#### Commenting
+### Commenting
 
-##### Comment out the current line or text selected in visual mode.
+#### Comment out the current line or text selected in visual mode.
 `<leader>cc`
 
-##### Same as cc but forces nesting.
+#### Same as cc but forces nesting.
 `<leader>cn`
 
-##### Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+#### Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
 `<leader>c<space>`
 
-##### Comments out the selected lines with a pretty block formatted layout.
+#### Comments out the selected lines with a pretty block formatted layout.
 `<leader>cs`
 
-##### Adds comment delimiters to the end of line and goes into insert mode between them.
+#### Adds comment delimiters to the end of line and goes into insert mode between them.
 `<leader>cA`
+
+### Visual Mode
+
+#### Standard binds
+##### Character Mode
+`v`
+
+##### Line Mode
+`V`
+
+##### Block Mode
+`Ctrl+v`
+
+### Easy Align
+Will allign selected lines based off of a privided character
+
+`ga` then enter the desired character, eg. `=`
+
+### Nerd Tree
+File explorer
+
+#### Toggle Nerd Tree
+`,nn`
+
+#### Focus in Nerd Tree
+`,nf`
+
+### Fuzzy Search
+
+#### Open fuzzy search
+`;`
+
+#### Open result in new tab
+`Ctrl+t` from fuzzy search window
+
+#### Open result in split
+`Ctrl+x`
+
+#### Open result in vsplit
+`Ctrl+v`
+
+### Cscope
+`l`
+
+### Tagbar
+`F8`
+
+### Tabs
+
+#### Next tab
+`Ctrl+Tab`
+#### Previous tab
+`Ctrl+Shift+Tab`
+
+### Cscope and Ctags
+`Ctrl+]`
+
+## YouCompleteMe
+
+### GoTo
+`,yg`
+
+### GetDoc
+`,yd`
+
+### GetType
+`,yt`
+
+### FixIt
+`,yf`
+
+### GoTo Declaration
+`,gl`
+
+### GoTo Definition
+`,gf`
+
+### GoTo Definition else Declaration
+`,gg`
 

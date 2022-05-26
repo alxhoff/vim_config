@@ -132,6 +132,9 @@ File explorer
 
 ## YouCompleteMe
 
+### Semantic Completion
+`Ctrl+Space`
+
 ### GoTo
 `,yg`
 

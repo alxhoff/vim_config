@@ -1,4 +1,4 @@
-CALL plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm install' }

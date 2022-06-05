@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'tmsvg/pear-tree'
 Plug 'junegunn/vim-easy-align'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm install' }
 Plug 'JamshedVesuna/vim-markdown-preview'
@@ -10,7 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vhdirk/vim-cmake'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
-Plug 'jeaye/color_coded'
+" Plug 'jeaye/color_coded'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'chazy/cscope_maps'
@@ -18,7 +19,12 @@ Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'valloric/youcompleteme'
 Plug 'nvie/vim-flake8'
+" Color schemes
 Plug 'jnurmine/Zenburn'
+Plug 'tomasiser/vim-code-dark'
+Plug 'joshdick/onedark.vim'
+Plug 'sonph/onehalf'
+
 Plug 'chiel92/vim-autoformat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Townk/vim-autoclose'
@@ -29,12 +35,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bogado/file-line'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
 set runtimepath+=~/.vim_runtime
 
-source ~/.vim_runtime/vimrcs/plug.vim
+" source ~/.vim_runtime/vimrcs/plug.vim
 
 " GENERAL CONFIG
 
@@ -178,7 +185,11 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-set nu "Numbers
+
+" turn hybrid line numbers on
+set number relativenumber
+set nu rnu
+
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
@@ -300,6 +311,8 @@ nmap <F8> :TagbarToggle<CR>
 " Saving
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <Leader>q :q<CR>
+nmap <Leader>a :qa!<CR>
 
 " :W sudo saves the file
 command W w !sudo tee % > /dev/null
@@ -338,13 +351,12 @@ command! -bang SimpylFoldImports let b:SimpylFold_fold_import = <bang>1 | call S
 
 "TABS
 " CTRL-Tab is next tab
-noremap <C-Tab> :<C-U>tabnext<CR>
-inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
-cnoremap <C-Tab> <C-C>:tabnext<CR>
-" CTRL-SHIFT-Tab is previous tab
-noremap <C-S-Tab> :<C-U>tabprevious<CR>
-inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
-cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
+map <leader>t :tabnew<cr>
+" Tab navigation like Firefox.
+nnoremap <C-a> :tabprevious<CR>
+nnoremap <C-d>   :tabnext<CR>
+inoremap <C-a> <Esc>:tabprevious<CR>i
+inoremap <C-d>   <Esc>:tabnext<CR>i
 
 " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cscopetag

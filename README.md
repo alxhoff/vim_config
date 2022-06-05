@@ -54,7 +54,16 @@ leader button is `,`
 #### Sude save
 `:W`
 
-#### Search
+### Tab selection
+`Shift+>`
+
+### Back tab selection
+`Shift+<`
+
+### Repeat last action
+`.`
+
+### Search
 Space
 
 ### Commenting
@@ -99,6 +108,10 @@ File explorer
 
 #### Focus in Nerd Tree
 `,nf`
+#### Open file in split
+`s`
+#### Open file in vsplit
+`i`
 
 ### Fuzzy Search
 
@@ -122,10 +135,16 @@ File explorer
 
 ### Tabs
 
+#### New tab
+`,t`
 #### Next tab
-`Ctrl+Tab`
+`Ctrl+d`
 #### Previous tab
-`Ctrl+Shift+Tab`
+`Ctrl+a`
+
+### Resizing
+#### Set equal sizing
+`Ctrl+w` -> `=`
 
 ### Cscope and Ctags
 `Ctrl+]`
@@ -156,3 +175,9 @@ File explorer
 ### GoTo Definition else Declaration
 `,gg`
 
+### Random binds
+#### Move to parent/next bracket
+`[{`/`]}`
+
+#### Move to partner bracket
+`%`

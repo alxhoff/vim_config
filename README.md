@@ -113,6 +113,12 @@ File explorer
 #### Open file in vsplit
 `i`
 
+### Moving splits
+#### Rotate windows up/left
+`Ctrl w + R` 
+#### Rotate windows down/right
+`Ctrl w + r`
+
 ### Fuzzy Search
 
 #### Open fuzzy search

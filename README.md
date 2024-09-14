@@ -48,19 +48,19 @@ leader button is `,`
 
 ### Saving
 
-#### Fast save
+##### Fast save
 `,w`
 
-#### Sude save
+##### Sudo save
 `:W`
 
-### Tab selection
+### Tab move selection selection
+##### Tab selection
 `Shift+>`
-
-### Back tab selection
+##### Back tab selection
 `Shift+<`
 
-### Repeat last action
+##### Repeat last action
 `.`
 
 ### Search
@@ -68,19 +68,19 @@ Space
 
 ### Commenting
 
-#### Comment out the current line or text selected in visual mode.
+##### Comment out the current line or text selected in visual mode.
 `<leader>cc`
 
-#### Same as cc but forces nesting.
+##### Same as cc but forces nesting.
 `<leader>cn`
 
-#### Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+##### Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
 `<leader>c<space>`
 
-#### Comments out the selected lines with a pretty block formatted layout.
+##### Comments out the selected lines with a pretty block formatted layout.
 `<leader>cs`
 
-#### Adds comment delimiters to the end of line and goes into insert mode between them.
+##### Adds comment delimiters to the end of line and goes into insert mode between them.
 `<leader>cA`
 
 ### Visual Mode
@@ -98,33 +98,33 @@ Space
 ### Easy Align
 Will allign selected lines based off of a privided character
 
-`ga` then enter the desired character, eg. `=`
+`ga` then enter the desired character, eg. `=` which would align the lines off of the `=` symbols.
 
 ### Nerd Tree
 File explorer
 
-#### Toggle Nerd Tree
+##### Toggle Nerd Tree
 `,nn`
 
-#### Focus in Nerd Tree
+##### Focus in Nerd Tree
 `,nf`
-#### Open file in split
+##### Open file in split
 `s`
-#### Open file in vsplit
+##### Open file in vsplit
 `i`
 
 ### Moving splits
-#### Rotate windows up/left
+##### Rotate windows up/left
 `Ctrl w + R` 
-#### Rotate windows down/right
+##### Rotate windows down/right
 `Ctrl w + r`
 
 ### Fuzzy Search
 
-#### Open fuzzy search
+##### Open fuzzy search
 `;`
 
-#### Open result in new tab
+##### Open result in new tab
 `Ctrl+t` from fuzzy search window
 
 #### Open result in split
@@ -154,6 +154,11 @@ File explorer
 
 ### Cscope and Ctags
 `Ctrl+]`
+
+## Inline documentation
+
+##### CCLS
+Press `K` to show documentation for `man` items, eg. `malloc`
 
 ## YouCompleteMe
 
@@ -187,3 +192,4 @@ File explorer
 
 #### Move to partner bracket
 `%`
+`

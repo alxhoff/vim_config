@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm install' }
 Plug 'JamshedVesuna/vim-markdown-preview'
@@ -14,12 +17,15 @@ Plug 'jeaye/color_coded'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'chazy/cscope_maps'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 Plug 'nvie/vim-flake8'
 Plug 'jnurmine/Zenburn'
-Plug 'chiel92/vim-autoformat'
+" Plug 'chiel92/vim-autoformat'
+Plug 'rhysd/vim-clang-format'
+Plug 'tpope/vim-dispatch'
+Plug 'kassio/neoterm'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Townk/vim-autoclose'
 " Plug 'davidhalter/jedi-vim'
@@ -29,5 +35,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bogado/file-line'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
+" Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()

@@ -47,13 +47,21 @@ highlight ColorColumn ctermbg=Black ctermfg=DarkRed
 "spelling
 set spell spelllang=en
 
+let g:clang_format#code_style = 'file' " Use the .clang-format file
+nmap <F3> :ClangFormat<CR>
+vmap <F3> :ClangFormat<CR>
 " Formats files when saving
 " au BufWrite * :Autoformat
-noremap <F3> :Autoformat<CR>
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
-let g:formatter_yapf_style = 'pep8'
+" noremap <F3> :Autoformat<CR>
+" let g:autoformat_autoindent = 0
+" let g:autoformat_retab = 0
+" let g:autoformat_remove_trailing_spaces = 0
+" let g:formatter_yapf_style = 'pep8'
+"
+" let g:formatdef_clangformat = '"clang-format"'
+" let g:formatters_cpp = ['clangformat']
+" let g:formatters_c = ['clangformat']
+
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -80,7 +88,8 @@ let python_highlight_all=1
 " colorscheme zenburn
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
+colors deus
+"colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 " lightline
 " let g:lightline.colorscheme='onehalfdark'

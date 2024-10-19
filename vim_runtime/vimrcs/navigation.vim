@@ -8,6 +8,7 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+map <leader>nr :NERDTreeRefreshRoot<cr>
 
 "  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => lightline
@@ -90,6 +91,15 @@ command! -bang SimpylFoldDocstrings let b:SimpylFold_fold_docstring = <bang>1 | 
 command! -bang SimpylFoldImports let b:SimpylFold_fold_import = <bang>1 | call SimpylFold#Recache()
 
 "TABS
+" Move to the next tab
+nnoremap <silent> <leader>tn :tabnext<CR>
+
+" Move to the previous tab
+nnoremap <silent> <leader>tp :tabprevious<CR>
+" Move to the next tab
+nnoremap <silent> <C-PageDown> :tabnext<CR>
+" Move to the previous tab
+nnoremap <silent> <C-PageUp> :tabprevious<CR>
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>

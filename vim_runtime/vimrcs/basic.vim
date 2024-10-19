@@ -24,7 +24,8 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
-
+" quit all
+command Q qall
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -83,20 +84,38 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" Automatically drop a line and indent after curly
+inoremap { {}<Esc>i<CR><Tab>
+set autoindent
+set smartindent
+set cindent
+
+" Terminal
+" Configure neoterm to open at the bottom
+let g:neoterm_default_mod = 'belowright'
+" Set neoterm to open in a horizontal split
+let g:neoterm_size = 15  
+" Open a terminal
+nnoremap <leader>t :Ttoggle<CR>
+" Close the terminal
+nnoremap <leader>r :Tclose<CR>
+
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
-
-
 " Add a bit extra margin to the left
 set foldcolumn=1
+
+" Automatically open tabbar
+autocmd VimEnter * TagbarOpen
+
+"Configure coc.nvim to use clangd
+" Use ccls for C/C++/Objective-C
+let g:coc_global_extensions = ['coc-clangd']
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -131,6 +150,9 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+
+" Ctrl+del to delete word
+nnoremap <C-Del> dw
 
 "SUPERTAB
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"

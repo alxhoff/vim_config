@@ -111,7 +111,7 @@ set tm=500
 set foldcolumn=1
 
 " Automatically open tabbar
-autocmd VimEnter * TagbarOpen
+" autocmd VimEnter * TagbarOpen
 
 "Configure coc.nvim to use clangd
 " Use ccls for C/C++/Objective-C

@@ -40,6 +40,10 @@ map <leader>nr :NERDTreeRefreshRoot<cr>
 
 "FZF fuzzy search
 map ; :Files<CR>
+command! -bang -nargs=* Files
+  \ call fzf#vim#files(expand('<args>') !=# '' ? expand('<args>') : finddir('.git/..', '.;') !=# '' ? finddir('.git/..', '.;') : expand('%:p:h'), <bang>0)
+
+
 " This is the default extra key bindings
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
@@ -81,7 +85,11 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 map l :TlistToggle<CR>
 
 "TAG BAR
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
+nnoremap <silent> <F8> :Vista!!<CR>
+
+
+
 
 "folding
 set foldmethod=syntax

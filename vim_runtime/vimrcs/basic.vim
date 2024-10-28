@@ -110,6 +110,9 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Folding on syntax
+autocmd FileType c setlocal foldmethod=syntax
+
 " Automatically open tabbar
 " autocmd VimEnter * TagbarOpen
 

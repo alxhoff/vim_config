@@ -19,6 +19,7 @@
     " show msg when any other cscope db added
     set cscopeverbose 
 
-    au BufRead,BufNewFile *.dts,*.dtsi set filetype=dts
+    au BufRead,BufNewFile *.dts,*.dtsi set filetype=devicetree
 syntax on
-au FileType devicetree setlocal foldmethod=syntax
+" au FileType devicetree setlocal foldmethod=syntax
+au FileType devicetree setlocal foldmethod=indent

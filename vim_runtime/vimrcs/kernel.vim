@@ -18,3 +18,7 @@
 
     " show msg when any other cscope db added
     set cscopeverbose 
+
+    au BufRead,BufNewFile *.dts,*.dtsi set filetype=dts
+syntax on
+au FileType devicetree setlocal foldmethod=syntax

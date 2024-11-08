@@ -1,14 +1,4 @@
 {
-  "suggest.noselect": true,
-"suggest.enablePreselect": true,
-  "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": ["compile_commands.json", ".git/"],
-      "initializationOptions": {
-        "clangdFileStatus": true
-      }
-    }
-  }
+ "suggest.noselect": true,
+"suggest.enablePreselect": true
 }

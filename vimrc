@@ -9,6 +9,7 @@ source ~/.vim_runtime/vimrcs/kernel.vim
 source ~/.vim_runtime/vimrcs/completion.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 source ~/.vim_runtime/vimrcs/syntax.vim
+source ~/.vim_runtime/vimrcs/autopairs.vim
 
 " 1 tab == 4 spaces
 set shiftwidth=4

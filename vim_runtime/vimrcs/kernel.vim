@@ -20,6 +20,7 @@
     set cscopeverbose 
 
     au BufRead,BufNewFile *.dts,*.dtsi set filetype=devicetree
+	autocmd FileType devicetree syntax off
 syntax on
 " au FileType devicetree setlocal foldmethod=syntax
-au FileType devicetree setlocal foldmethod=indent
+" au FileType devicetree setlocal foldmethod=indent

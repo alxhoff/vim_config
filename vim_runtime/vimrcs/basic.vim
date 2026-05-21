@@ -1,5 +1,32 @@
 set history=500
 set formatoptions+=r
+set fileformats=unix
+
+"Find tags better
+let g:gutentags_trigger_on_files = 0
+let g:gutentags_ctags_tagfile = './tags' " Use only ./tags
+let g:gutentags_debug = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_ctags_auto_gen = 0
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_ctags_options = '--tag-file=./tags'
+
+set tags=./tags;
+" set tags=./tags
+" set tags+=./tags;/
+set wildmenu
+set wildmode=list:longest
+set ignorecase
+set smartcase
+nnoremap <Leader>gd :tag <C-r><C-w><CR>
+nnoremap <Leader>gr :tselect <C-r><C-w><CR>
+nnoremap <Leader>g] g]
+nnoremap <Leader>gb :tnext<CR>
+nnoremap <Leader>g[ :tprevious<CR>
+
+" Jump between header and source files
+" nnoremap <Leader>hh :e %:r.h<CR>
+" nnoremap <Leader>cc :e %:r.c<CR>
 
 " Enable filetype plugins
 filetype plugin on
@@ -90,15 +117,15 @@ set autoindent
 set smartindent
 set cindent
 
-" Terminal
-" Configure neoterm to open at the bottom
-let g:neoterm_default_mod = 'belowright'
-" Set neoterm to open in a horizontal split
-let g:neoterm_size = 15  
-" Open a terminal
-nnoremap <leader>t :Ttoggle<CR>
-" Close the terminal
-nnoremap <leader>r :Tclose<CR>
+" " Terminal
+" " Configure neoterm to open at the bottom
+" let g:neoterm_default_mod = 'belowright'
+" " Set neoterm to open in a horizontal split
+" let g:neoterm_size = 15
+" " Open a terminal
+" nnoremap <leader>t :Ttoggle<CR>
+" " Close the terminal
+" nnoremap <leader>r :Tclose<CR>
 
 
 " No annoying sound on errors
@@ -164,15 +191,19 @@ let g:SuperTabDefaultCompletionType = "context"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
+" " Use spaces instead of tabs
+" set expandtab
+"
+" " Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+"
+" " 1 tab == 4 spaces
+" set shiftwidth=4
+" set tabstop=4
+set tabstop=8       " Set tab width to 8 spaces (Linux kernel style)
+set shiftwidth=8    " Auto-indent width
+set softtabstop=8   " Backspace treats tabs as 8 spaces
+set noexpandtab     " Use tabs, not spaces
 
 " Linebreak on 500 characters
 set lbr

@@ -91,6 +91,12 @@ set cursorline
 colors deus
 "colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
+" Tell airline not to try and get linter status
+let g:airline_extensions_ale_enabled = 0
+let g:airline_extensions_syntastic_enabled = 0
+
+" You can also disable the CoC section if it's the problem
+let g:airline_extensions_coc_enabled = 0
 " lightline
 " let g:lightline.colorscheme='onehalfdark'
 

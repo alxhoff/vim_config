@@ -16,9 +16,9 @@ set shiftwidth=4
 set tabstop=4
 
 "CTAGS
-set tags=./tags,tags;$HOME
+" set tags=./tags,tags;$HOME
 "Work kernel
 set autochdir
-set tags=./tags,tags,$HOME/Tags
-set tags+=/home/alxhoff/Work/Optigame/android_builds/voodik/Android_7.1/android_source_xu3_Android7.1/kernel/hardkernel/odroidxu3/tags
-set autochdir
+" set tags=./tags,tags,$HOME/Tags
+" set tags+=/home/alxhoff/Work/Optigame/android_builds/voodik/Android_7.1/android_source_xu3_Android7.1/kernel/hardkernel/odroidxu3/tags
+" set autochdir

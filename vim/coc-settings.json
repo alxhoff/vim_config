@@ -1,4 +1,19 @@
 {
- "suggest.noselect": true,
-"suggest.enablePreselect": true
+    "suggest.noselect": true,
+    "suggest.enablePreselect": true
+    "suggest.floatEnable": true,
+    "suggest.floatConfig": {
+        "border": true,
+        "maxWidth": 60,
+        "maxHeight": 10,
+        "winblend": 10
+    }
+    "signature.floatEnable": true,
+    "signature.floatConfig": {
+        "anchor": "NW",       // Position relative to the cursor: NW, NE, SW, SE
+        "maxWidth": 60,       // Set a maximum width for the popup
+        "maxHeight": 5,       // Set a maximum height for the popup
+        "winblend": 10        // Adjust transparency (0 = opaque, 100 = fully transparent)
+  }
 }
+

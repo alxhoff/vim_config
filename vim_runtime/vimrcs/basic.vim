@@ -2,18 +2,20 @@ set history=500
 set formatoptions+=r
 set fileformats=unix
 
-"Find tags better
+" Tags: no trailing ';' — that makes Vim walk up parent dirs (slow/wrong mega-tags).
+" Kernel trees get root tags via kernel.vim; other projects use ./tags in project root.
 let g:gutentags_trigger_on_files = 0
-let g:gutentags_ctags_tagfile = './tags' " Use only ./tags
-let g:gutentags_debug = 1
+let g:gutentags_ctags_tagfile = './tags'
+let g:gutentags_generate_on_new = 0
+let g:gutentags_generate_on_missing = 0
+let g:gutentags_generate_on_write = 0
+let g:gutentags_debug = 0
 let g:tagbar_autoclose = 1
 let g:tagbar_ctags_auto_gen = 0
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_ctags_options = '--tag-file=./tags'
 
-set tags=./tags;
-" set tags=./tags
-" set tags+=./tags;/
+set tags=./tags
 set wildmenu
 set wildmode=list:longest
 set ignorecase

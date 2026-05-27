@@ -15,10 +15,6 @@ source ~/.vim_runtime/vimrcs/autopairs.vim
 set shiftwidth=4
 set tabstop=4
 
-"CTAGS
-" set tags=./tags,tags;$HOME
-"Work kernel
+" autochdir: cwd follows the open file (good for ./tags in small projects).
+" Kernel tags/cscope are pinned to the tree root in kernel.vim — see $KERNEL_SRC.
 set autochdir
-" set tags=./tags,tags,$HOME/Tags
-" set tags+=/home/alxhoff/Work/Optigame/android_builds/voodik/Android_7.1/android_source_xu3_Android7.1/kernel/hardkernel/odroidxu3/tags
-" set autochdir

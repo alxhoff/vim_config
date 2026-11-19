@@ -1,10 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker)
+" => ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" coc (clangd / pyright) owns language-server diagnostics.
+" ALE does not start its own servers. It only runs flake8 on Python.
+let g:ale_disable_lsp = 1
+let g:ale_linters_explicit = 1
 let g:ale_linters = {
-            \   'javascript': ['jshint'],
-            \   'python': ['flake8'],
-            \   'go': ['go', 'golint', 'errcheck']
+            \   'python': ['flake8']
             \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,9 +49,7 @@ highlight ColorColumn ctermbg=Black ctermfg=DarkRed
 "spelling
 set spell spelllang=en
 
-let g:clang_format#code_style = 'file' " Use the .clang-format file
-nmap <F3> :ClangFormat<CR>
-vmap <F3> :ClangFormat<CR>
+" C/C++ format: F3 in format.vim (clang-format; tab-aware fallback).
 " Formats files when saving
 " au BufWrite * :Autoformat
 " noremap <F3> :Autoformat<CR>
@@ -71,16 +71,6 @@ nmap ga <Plug>(EasyAlign)
 
 syntax on
 
-"Sytastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 autocmd FileType c,cpp setlocal equalprg=clang-format
 autocmd FileType h,hpp setlocal equalprg=clang-format
 let python_highlight_all=1
@@ -89,16 +79,6 @@ let python_highlight_all=1
 set t_Co=256
 set cursorline
 colors deus
-"colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
-" Tell airline not to try and get linter status
-let g:airline_extensions_ale_enabled = 0
-let g:airline_extensions_syntastic_enabled = 0
-
-" You can also disable the CoC section if it's the problem
-let g:airline_extensions_coc_enabled = 0
-" lightline
-" let g:lightline.colorscheme='onehalfdark'
 
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

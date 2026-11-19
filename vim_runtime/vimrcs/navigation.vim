@@ -61,14 +61,7 @@ let g:fzf_action = {
             \ 'ctrl-x': 'split',
             \ 'ctrl-v': 'vsplit' }
 
-" Default fzf layout
-" - down / up / left / right
 let g:fzf_layout = { 'down': '~40%' }
-
-" In Neovim, you can set up fzf window using a Vim command
-let g:fzf_layout = { 'window': 'enew' }
-let g:fzf_layout = { 'window': '-tabnew' }
-let g:fzf_layout = { 'window': '10split enew' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -92,11 +85,6 @@ let g:fzf_colors =
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-"SCSOPE MAP
-map l :TlistToggle<CR>
-
-"TAG BAR
-" nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F8> :Vista!!<CR>
 
 
@@ -109,10 +97,7 @@ set foldlevel=2
 command! -bang SimpylFoldDocstrings let b:SimpylFold_fold_docstring = <bang>1 | call SimpylFold#Recache()
 command! -bang SimpylFoldImports let b:SimpylFold_fold_import = <bang>1 | call SimpylFold#Recache()
 
-"TABS
-" Move to the next tab
-nnoremap <silent> <leader>tn :tabnext<CR>
-
+" ,tn is :tabnew and ,t, is :tabnext, both set in basic.vim.
 " Move to the previous tab
 nnoremap <silent> <leader>tp :tabprevious<CR>
 " Move to the next tab

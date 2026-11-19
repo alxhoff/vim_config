@@ -1,6 +1,8 @@
 {
-  "suggest.noselect": true,
+  "suggest.noselect": false,
   "suggest.enablePreselect": true,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.selection": "first",
   "suggest.floatEnable": true,
   "suggest.floatConfig": {
     "border": true,
@@ -15,6 +17,15 @@
     "maxHeight": 5,
     "winblend": 10
   },
-  "clangd.fallbackFlags": ["-std=c11"],
-  "clangd.detectExtensionConflicts": false
+  "clangd.arguments": [
+    "--function-arg-placeholders=1",
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--header-insertion-decorators",
+    "--all-scopes-completion"
+  ],
+  "clangd.fallbackFlags": ["-std=gnu11", "-D_GNU_SOURCE"],
+  "clangd.disableSnippetCompletion": false,
+  "clangd.detectExtensionConflicts": false,
+  "pyright.completion.snippetSupport": true
 }

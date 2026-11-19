@@ -1,0 +1,11 @@
+# User clangd config (symlink: ~/.config/clangd/config.yaml)
+# https://clangd.llvm.org/config
+Completion:
+  AllScopes: Yes
+  HeaderInsertion: IWYU
+Diagnostics:
+  # Offer quickfixes / clearer errors when a symbol needs a header (e.g. size_t).
+  MissingIncludes: Strict
+InlayHints:
+  # Hide [0]=, [1]=, … in array initializer lists (editor hints, not written to the file).
+  Designators: false

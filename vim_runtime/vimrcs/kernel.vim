@@ -24,6 +24,8 @@ function! s:SetupKernelNavigation() abort
         return
     endif
 
+    setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+
     let tags_file = fnamemodify(root . '/tags', ':p')
     if filereadable(tags_file)
         let &l:tags = tags_file
@@ -42,7 +44,7 @@ function! s:SetupKernelNavigation() abort
         catch
         endtry
     endif
-    silent! cs add cscope_db
+    execute 'silent! cs add' fnameescape(cscope_db)
     let s:kernel_cscope_db = cscope_db
 endfunction
 
@@ -58,5 +60,4 @@ nnoremap g] <C-w>v<C-]>
 set cscopeverbose
 
 au BufRead,BufNewFile *.dts,*.dtsi set filetype=devicetree
-autocmd FileType devicetree syntax off
-syntax on
+autocmd FileType devicetree setlocal syntax=OFF

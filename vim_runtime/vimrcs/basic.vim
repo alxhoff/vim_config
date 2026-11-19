@@ -4,17 +4,6 @@ set fileformats=unix
 
 " Tags: no trailing ';' — that makes Vim walk up parent dirs (slow/wrong mega-tags).
 " Kernel trees get root tags via kernel.vim; other projects use ./tags in project root.
-let g:gutentags_trigger_on_files = 0
-let g:gutentags_ctags_tagfile = './tags'
-let g:gutentags_generate_on_new = 0
-let g:gutentags_generate_on_missing = 0
-let g:gutentags_generate_on_write = 0
-let g:gutentags_debug = 0
-let g:tagbar_autoclose = 1
-let g:tagbar_ctags_auto_gen = 0
-let g:tagbar_ctags_bin = 'ctags'
-let g:tagbar_ctags_options = '--tag-file=./tags'
-
 set tags=./tags
 set wildmenu
 set wildmode=list:longest
@@ -113,22 +102,12 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-" Automatically drop a line and indent after curly
-inoremap { {}<Esc>i<CR><Tab>
+" Braces are paired by auto-pairs. cindent handles the newline indent.
 set autoindent
 set smartindent
 set cindent
 
-" " Terminal
-" " Configure neoterm to open at the bottom
-" let g:neoterm_default_mod = 'belowright'
-" " Set neoterm to open in a horizontal split
-" let g:neoterm_size = 15
-" " Open a terminal
-" nnoremap <leader>t :Ttoggle<CR>
-" " Close the terminal
-" nnoremap <leader>r :Tclose<CR>
-
+" Build and run: F4, F5, F6 in terminal.vim.
 
 " No annoying sound on errors
 set noerrorbells
@@ -147,7 +126,7 @@ autocmd FileType c setlocal foldmethod=syntax
 
 "Configure coc.nvim to use clangd
 " Use ccls for C/C++/Objective-C
-let g:coc_global_extensions = ['coc-clangd']
+let g:coc_global_extensions = ['coc-clangd', 'coc-pyright']
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,26 +165,15 @@ set noswapfile
 " Ctrl+del to delete word
 nnoremap <C-Del> dw
 
-"SUPERTAB
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabDefaultCompletionType = "context"
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Use spaces instead of tabs
 " set expandtab
 "
-" " Be smart when using tabs ;)
+" Be smart when using tabs.
+" Width lives in vimrc (4). Kernel buffers switch to 8 in kernel.vim.
 set smarttab
-"
-" " 1 tab == 4 spaces
-" set shiftwidth=4
-" set tabstop=4
-set tabstop=8       " Set tab width to 8 spaces (Linux kernel style)
-set shiftwidth=8    " Auto-indent width
-set softtabstop=8   " Backspace treats tabs as 8 spaces
-set noexpandtab     " Use tabs, not spaces
 
 " Linebreak on 500 characters
 set lbr
@@ -399,7 +367,4 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-
-" Jedi vim
-let g:jedi#use_splits_not_buffers = "left"
 
